@@ -23,23 +23,20 @@
     header h1 {
       margin: 0;
       font-family: 'Libre Baskerville', serif;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     nav {
       background-color: #5c0000;
       padding: 0.75rem 1rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-    }
-    .nav-logo {
-      color: white;
-      font-size: 1.25rem;
-      font-weight: bold;
-      text-decoration: none;
+      position: relative;
     }
     .nav-toggle {
+      position: absolute;
+      left: 1rem;
       display: none;
       font-size: 1.5rem;
       color: white;
@@ -49,6 +46,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
     }
     .nav-links a {
       color: white;
@@ -72,6 +70,7 @@
       display: block;
       padding: 0.5rem 1rem;
       text-decoration: none;
+      color: white;
     }
     .dropdown:hover .dropdown-content {
       display: block;
@@ -126,6 +125,10 @@
       .nav-links.active {
         display: flex;
       }
+      .dropdown-content {
+        position: static;
+        background-color: #5c0000;
+      }
     }
   </style>
 </head>
@@ -135,12 +138,11 @@
   </header>
 
   <nav>
-    <a href="index.html" class="nav-logo">Bushy Run 192</a>
     <div class="nav-toggle" onclick="toggleMenu()">☰</div>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <div class="dropdown">
-        <a href="about.html">About Us</a>
+        <a href="#" onclick="return false;">About Us ▾</a>
         <div class="dropdown-content">
           <a href="meeting-info.html">Meeting Info</a>
           <a href="officers.html">Officers</a>
