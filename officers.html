@@ -3,27 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Officers | Bushy Run Chapter No. 192</title>
+  <title>Bushy Run Chapter No. 192 | Royal Arch Masons of PA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #f8f8f8;
       color: #222;
+      line-height: 1.6;
     }
     header {
       background-color: #800000;
       color: white;
-      padding: 2.5rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
+    header img {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
     header h1 {
-      margin: 0;
       font-family: 'Libre Baskerville', serif;
       font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
     }
     nav {
       background-color: #5c0000;
@@ -34,6 +51,18 @@
       flex-wrap: wrap;
       position: relative;
     }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
     .nav-toggle {
       position: absolute;
       left: 1rem;
@@ -41,18 +70,6 @@
       font-size: 1.5rem;
       color: white;
       cursor: pointer;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.125rem;
-      font-weight: bold;
     }
     .dropdown {
       position: relative;
@@ -76,29 +93,38 @@
       display: block;
     }
     .section {
-      max-width: 960px;
+      max-width: 1100px;
       margin: 3rem auto;
       padding: 0 1.5rem;
     }
     .section h2 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 2rem;
       color: #800000;
+      font-size: 2.25rem;
       border-bottom: 2px solid #800000;
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
-    }
-    .officer {
-      background-color: white;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .officer h3 {
-      margin-top: 0;
       font-family: 'Libre Baskerville', serif;
-      color: #5c0000;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #800000;
+      margin-top: 0;
+      font-size: 1.5rem;
+      font-family: 'Libre Baskerville', serif;
     }
     footer {
       background-color: #222;
@@ -118,9 +144,7 @@
         width: 100%;
         background-color: #5c0000;
         margin-top: 1rem;
-      }
-      .nav-links a {
-        padding: 0.75rem 1rem;
+        gap: 1rem;
       }
       .nav-links.active {
         display: flex;
@@ -134,7 +158,9 @@
 </head>
 <body>
   <header>
-    <h1>Officers of Bushy Run Chapter No. 192</h1>
+    <img src="https://paroyalarch.org/wp-content/uploads/2023/05/cropped-Grand-Holy-Royal-Arch2.png" alt="Royal Arch Emblem">
+    <h1>Bushy Run Chapter No. 192</h1>
+    <p>Royal Arch Masons of Pennsylvania, Irwin, PA</p>
   </header>
 
   <nav>
@@ -157,19 +183,20 @@
 
   <div class="section">
     <h2>2025 Officers</h2>
-
-    <div class="officer"><h3>High Priest</h3><p>Matthew R. Williams</p></div>
-    <div class="officer"><h3>King</h3><p>Jeffrey Shrader</p></div>
-    <div class="officer"><h3>Scribe</h3><p>Ronald F. Rearick</p></div>
-    <div class="officer"><h3>Secretary</h3><p>Richard A. Rodibaugh, PHP</p></div>
-    <div class="officer"><h3>Treasurer</h3><p>Robert S. Metcalfe, PHP</p></div>
-    <div class="officer"><h3>Chaplain</h3><p>Charles J. Anthony, PHP</p></div>
-    <div class="officer"><h3>Captain of the Host</h3><p>Frank A. Persia, Sr., PHP</p></div>
-    <div class="officer"><h3>Royal Arch Captain</h3><p>Andrew M. Paluch</p></div>
-    <div class="officer"><h3>Master of the Third Veil</h3><p>Robert E. Holderbaum</p></div>
-    <div class="officer"><h3>Master of the Second Veil</h3><p>Troy R. Rosenlof</p></div>
-    <div class="officer"><h3>Master of the First Veil</h3><p>Thomas J. Anke</p></div>
-    <div class="officer"><h3>Senior Master of Ceremonies</h3><p>Kenneth M. Donaldson</p></div>
+    <div class="card-grid">
+      <div class="card"><h3>High Priest</h3><p>Matthew R. Williams</p></div>
+      <div class="card"><h3>King</h3><p>Jeffrey Shrader</p></div>
+      <div class="card"><h3>Scribe</h3><p>Ronald F. Rearick</p></div>
+      <div class="card"><h3>Secretary</h3><p>Richard A. Rodibaugh, PHP</p></div>
+      <div class="card"><h3>Treasurer</h3><p>Robert S. Metcalfe, PHP</p></div>
+      <div class="card"><h3>Chaplain</h3><p>Charles J. Anthony, PHP</p></div>
+      <div class="card"><h3>Captain of the Host</h3><p>Frank A. Persia, Sr., PHP</p></div>
+      <div class="card"><h3>Royal Arch Captain</h3><p>Andrew M. Paluch</p></div>
+      <div class="card"><h3>Master of the Third Veil</h3><p>Robert E. Holderbaum</p></div>
+      <div class="card"><h3>Master of the Second Veil</h3><p>Troy R. Rosenlof</p></div>
+      <div class="card"><h3>Master of the First Veil</h3><p>Thomas J. Anke</p></div>
+      <div class="card"><h3>Senior Master of Ceremonies</h3><p>Kenneth M. Donaldson</p></div>
+    </div>
   </div>
 
   <footer>
