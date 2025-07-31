@@ -117,7 +117,7 @@
       margin-bottom: 0.75rem;
       font-weight: bold;
     }
-    form input, form textarea, form select {
+    form input {
       width: 100%;
       padding: 0.5rem;
       margin-top: 0.25rem;
@@ -197,7 +197,7 @@
     <h2>Join Bushy Run Chapter No. 192</h2>
     <p>Interested in becoming a Royal Arch Mason? We're happy to speak with you. Please fill out the form below and one of our members will contact you soon.</p>
 
-    <form action="https://formspree.io/f/xqallwby" method="POST" data-formspree>
+    <form data-formspree>
       <input type="hidden" name="_subject" value="Bushy Run 192 Membership Inquiry">
 
       <label for="name">Name *</label>
@@ -205,6 +205,9 @@
 
       <label for="email">Email *</label>
       <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
 
       <label for="lodge">Your Lodge Name and Number *</label>
       <input type="text" id="lodge" name="lodge" required>
@@ -231,7 +234,7 @@
         form.addEventListener("submit", async function (e) {
           e.preventDefault();
           const formData = new FormData(form);
-          const response = await fetch(form.action, {
+          const response = await fetch("https://formspree.io/f/xqallwby", {
             method: "POST",
             body: formData,
             headers: {
