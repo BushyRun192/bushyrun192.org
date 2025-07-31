@@ -45,31 +45,25 @@
     nav {
       background-color: #5c0000;
       padding: 0.75rem 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
       position: relative;
+    }
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
     }
     .nav-links {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 2.5rem;
-      justify-content: center;
     }
     .nav-links a {
       color: white;
       text-decoration: none;
       font-size: 1.25rem;
       font-weight: bold;
-    }
-    .nav-toggle {
-      position: absolute;
-      left: 1rem;
-      display: none;
-      font-size: 1.5rem;
-      color: white;
-      cursor: pointer;
     }
     .dropdown {
       position: relative;
@@ -135,14 +129,21 @@
     @media (max-width: 768px) {
       .nav-toggle {
         display: block;
+        position: absolute;
+        top: 0.75rem;
+        left: 1rem;
+        z-index: 10;
       }
       .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
         background-color: #5c0000;
-        margin-top: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
         gap: 1rem;
+        padding: 1rem;
       }
       .nav-links.active {
         display: flex;
