@@ -7,7 +7,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
+    html {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -86,7 +94,7 @@
       display: block;
     }
     .section {
-      max-width: 900px;
+      max-width: 800px;
       margin: 3rem auto;
       padding: 0 1.5rem;
     }
@@ -99,25 +107,26 @@
       font-family: 'Libre Baskerville', serif;
     }
     form {
-      background-color: white;
+      background: white;
       padding: 2rem;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    label {
+    form label {
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       font-weight: bold;
     }
-    input, textarea {
+    form input, form textarea, form select {
       width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1.5rem;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      margin-bottom: 1.25rem;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
     }
-    button {
+    form button {
       background-color: #800000;
       color: white;
       padding: 0.75rem 1.5rem;
@@ -126,7 +135,7 @@
       font-size: 1rem;
       cursor: pointer;
     }
-    button:hover {
+    form button:hover {
       background-color: #5c0000;
     }
     footer {
@@ -185,27 +194,25 @@
   </nav>
 
   <div class="section">
-    <h2>Become a Companion</h2>
-    <p>Interested in joining Bushy Run Chapter No. 192? We welcome Master Masons in good standing who are ready to explore the rich history, symbolism, and fellowship of Royal Arch Masonry.</p>
-    <p>To begin the journey, please complete the form below. Our Secretary will follow up with more information about how to petition and when to visit us in person.</p>
+    <h2>Join Bushy Run Chapter No. 192</h2>
+    <p>Interested in becoming a Royal Arch Mason? We're happy to speak with you. Please fill out the form below and one of our members will contact you soon.</p>
 
-<form action="mailto:ampaluch@hotmail.com?subject=Bushy%20Run%20192%20Membership%20Inquiry" method="POST" enctype="text/plain">
- <label for="name">Name</label>
+    <form action="https://formspree.io/f/xqallwby" method="POST">
+      <input type="hidden" name="_subject" value="Bushy Run 192 Membership Inquiry">
+
+      <label for="name">Name *</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">Email</label>
+      <label for="email">Email *</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="lodge">Your Lodge Name & Number</label>
+      <label for="lodge">Your Lodge Name and Number *</label>
       <input type="text" id="lodge" name="lodge" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <div class="g-recaptcha" data-sitekey="6Lf3AJYrAAAAADkNaiKZMnxi4Oq4RGoWehrV0Ltu"></div>
 
-      <button type="submit">Send</button>
+      <button type="submit">Send Message</button>
     </form>
-  </div>
-
   </div>
 
   <footer>
