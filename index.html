@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bushy Run Chapter No. 192 | Royal Arch Masons of PA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     html {
       box-sizing: border-box;
@@ -44,37 +44,54 @@
     }
     nav {
       background-color: #5c0000;
-      padding: 0.75rem 0;
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav a {
-      color: white;
-      margin: 0.5rem 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.125rem;
-    }
-    .hero {
-      position: relative;
-      background: url('https://paroyalarch.org/wp-content/uploads/2023/05/grandchapter-1.5.jpg') center center/cover no-repeat;
-      height: 50vh;
-      min-height: 300px;
+      padding: 0.75rem 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      text-align: center;
-      padding: 1rem;
+      flex-wrap: wrap;
+      position: relative;
     }
-    .hero h2 {
-      font-size: clamp(1.5rem, 6vw, 3rem);
-      max-width: 90%;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-      font-family: 'Libre Baskerville', serif;
-      margin: 0;
+    .nav-toggle {
+      position: absolute;
+      left: 1rem;
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #5c0000;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: white;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
     .section {
       max-width: 1100px;
@@ -110,41 +127,6 @@
       font-size: 1.5rem;
       font-family: 'Libre Baskerville', serif;
     }
-    .cta {
-      background: url('https://paroyalarch.org/wp-content/uploads/2022/03/Slider-Image-2-scaled.jpg') center center/cover no-repeat;
-      background-color: #5c0000;
-      background-blend-mode: multiply;
-      color: white;
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    .cta h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px black;
-      font-family: 'Libre Baskerville', serif;
-    }
-    .cta p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 2px black;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta a {
-      background: #fff;
-      color: #800000;
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-      display: inline-block;
-    }
-    .cta a:hover {
-      background: #f2f2f2;
-    }
     footer {
       background-color: #222;
       color: #ccc;
@@ -153,37 +135,57 @@
       margin-top: 3rem;
       font-size: 0.9rem;
     }
-    @media (max-width: 600px) {
-      nav a {
-        margin: 0.25rem 0.5rem;
-        font-size: 1rem;
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
       }
-      .card {
-        padding: 1.25rem;
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #5c0000;
+        margin-top: 1rem;
+        gap: 1rem;
       }
-      .cta h2 {
-        font-size: 1.75rem;
+      .nav-links.active {
+        display: flex;
       }
-      .cta p {
-        font-size: 1rem;
+      .dropdown-content {
+        position: static;
+        background-color: #5c0000;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://paroyalarch.org/wp-content/uploads/2023/05/cropped-Grand-Holy-Royal-Arch2.png" alt="Royal Arch Emblem">
+    <img src="https://paroyalarch.org/wp-content/uploads/2023/05/cropped-Grand-Holy-Royal-Arch2.png" alt="Royal Arch Emblem" />
     <h1>Bushy Run Chapter No. 192</h1>
     <p>Royal Arch Masons of Pennsylvania, Irwin, PA</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Officers</a>
-    <a href="#">Join Us</a>
-    <a href="#">Contact</a>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" onclick="return false;">About Us ▾</a>
+        <div class="dropdown-content">
+          <a href="meeting-info.html">Meeting Info</a>
+          <a href="officers.html">Officers</a>
+          <a href="past-high-priests.html">Past High Priests</a>
+          <a href="history.html">Our History</a>
+        </div>
+      </div>
+      <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
+
+  <!-- your page content here -->
+
+
 
   <div class="hero">
     <h2>What if there's more Light still ahead?</h2>
@@ -217,5 +219,11 @@
   <footer>
     &copy; 2025 Bushy Run Chapter No. 192, Royal Arch Masons of Pennsylvania
   </footer>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
