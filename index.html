@@ -44,18 +44,38 @@
     }
     nav {
       background-color: #5c0000;
-      padding: 0.75rem 0;
-      text-align: center;
+      padding: 0.75rem 2rem;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
     }
     nav a {
       color: white;
-      margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: 600;
       font-size: 1.125rem;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #5c0000;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
     .hero {
       position: relative;
@@ -154,17 +174,18 @@
       font-size: 0.9rem;
     }
     @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding-top: 0.5rem;
+      }
       nav a {
-        margin: 0.25rem 0.5rem;
-        font-size: 1rem;
-      }
-      .card {
-        padding: 1.25rem;
-      }
-      .cta h2 {
-        font-size: 1.75rem;
-      }
-      .cta p {
+        margin: 0.25rem 1rem;
         font-size: 1rem;
       }
     }
@@ -177,22 +198,22 @@
     <p>Royal Arch Masons of Pennsylvania, Irwin, PA</p>
   </header>
 
-<nav>
-  <div class="nav-links" id="navLinks">
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-    <a href="#" onclick="return false;">About Us ▾</a>
-    <div class="dropdown-content">
-      <a href="meeting-info.html">Meeting Info</a>
-      <a href="officers.html">Officers</a>
-      <a href="past-high-priests.html">Past High Priests</a>
-      <a href="history.html">Our History</a>
+  <nav>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" onclick="return false;">About Us ▾</a>
+        <div class="dropdown-content">
+          <a href="meeting-info.html">Meeting Info</a>
+          <a href="officers.html">Officers</a>
+          <a href="past-high-priests.html">Past High Priests</a>
+          <a href="history.html">Our History</a>
+        </div>
+      </div>
+      <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </div>
-  <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
-  <a href="join.html">Join Us</a>
-  <a href="contact.html">Contact</a>
-</div>
   </nav>
 
   <div class="hero">
