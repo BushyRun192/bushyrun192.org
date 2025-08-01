@@ -51,6 +51,18 @@
       flex-wrap: wrap;
       position: relative;
     }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
     .nav-toggle {
       position: absolute;
       left: 1rem;
@@ -59,19 +71,6 @@
       color: white;
       cursor: pointer;
     }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      justify-content: center;
-      align-items: center;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
     .dropdown {
       position: relative;
     }
@@ -79,60 +78,36 @@
       display: none;
       position: absolute;
       background-color: #5c0000;
+      min-width: 160px;
       top: 100%;
       left: 0;
-      min-width: 200px;
       z-index: 1;
     }
     .dropdown-content a {
       display: block;
-      padding: 0.75rem 1.25rem;
-      white-space: nowrap;
-      color: white;
+      padding: 0.5rem 1rem;
       text-decoration: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
     }
     .dropdown:hover .dropdown-content {
       display: block;
     }
     .hero {
-      background-image: url('https://paroyalarch.org/wp-content/uploads/2023/05/grandchapter-1.5.jpg');
-      background-size: 120% auto;
-      background-position: center;
-      padding: 6rem 1rem;
+      background: url('https://paroyalarch.org/wp-content/uploads/2023/05/grandchapter-1.5.jpg') center center/cover no-repeat;
+      height: 50vh;
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: white;
       text-align: center;
+      padding: 1rem;
     }
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
       font-family: 'Libre Baskerville', serif;
-      text-shadow: 1px 1px 4px #000;
-    }
-    .cta {
-      background-color: #800000;
-      color: white;
-      padding: 2.5rem 1rem;
-      text-align: center;
-    }
-    .cta h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      font-family: 'Libre Baskerville', serif;
-    }
-    .cta p {
-      max-width: 700px;
-      margin: 1rem auto;
-      font-size: 1.1rem;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 2rem;
-      background: white;
-      color: #800000;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 4px;
+      margin: 0;
     }
     .section {
       max-width: 1100px;
@@ -168,6 +143,41 @@
       font-size: 1.5rem;
       font-family: 'Libre Baskerville', serif;
     }
+    .cta {
+      background: url('https://paroyalarch.org/wp-content/uploads/2022/03/Slider-Image-2-scaled.jpg') center center/cover no-repeat;
+      background-color: #5c0000;
+      background-blend-mode: multiply;
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .cta h2 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px black;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .cta p {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 2px black;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta a {
+      background: #fff;
+      color: #800000;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .cta a:hover {
+      background: #f2f2f2;
+    }
     footer {
       background-color: #222;
       color: #ccc;
@@ -179,14 +189,13 @@
     @media (max-width: 768px) {
       .nav-toggle {
         display: block;
-        top: 1rem;
       }
       .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #5c0000;
-        margin-top: 3rem;
+        margin-top: 1rem;
         gap: 1rem;
       }
       .nav-links.active {
@@ -219,10 +228,24 @@
           <a href="history.html">Our History</a>
         </div>
       </div>
-      <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
       <a href="join.html">Join Us</a>
       <a href="contact.html">Contact</a>
+  <div class="nav-links" id="navLinks">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+    <a href="#" onclick="return false;">About Us ▾</a>
+    <div class="dropdown-content">
+      <a href="meeting-info.html">Meeting Info</a>
+      <a href="officers.html">Officers</a>
+      <a href="past-high-priests.html">Past High Priests</a>
+      <a href="history.html">Our History</a>
     </div>
+  </div>
+  <a href="https://www.groupable.com/Local/PA-RAM/Bushy-Run-192" target="_blank">Groupable</a>
+  <a href="join.html">Join Us</a>
+  <a href="contact.html">Contact</a>
+</div>
+
   </nav>
 
   <div class="hero">
@@ -255,13 +278,13 @@
   </div>
 
   <footer>
-    &copy; 2025 Bushy Run Chapter No. 192, Royal Arch Masons of Pennsylvania | Website inspired by paroyalarch.org
+    &copy; 2025 Bushy Run Chapter No. 192, Royal Arch Masons of Pennsylvania
   </footer>
 
   <script>
     function toggleMenu() {
-      const links = document.getElementById('navLinks');
-      links.classList.toggle('active');
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
     }
   </script>
 </body>
