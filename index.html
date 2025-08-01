@@ -51,18 +51,6 @@
       flex-wrap: wrap;
       position: relative;
     }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      justify-content: center;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
     .nav-toggle {
       position: absolute;
       left: 1rem;
@@ -71,6 +59,19 @@
       color: white;
       cursor: pointer;
     }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
     .dropdown {
       position: relative;
     }
@@ -78,19 +79,60 @@
       display: none;
       position: absolute;
       background-color: #5c0000;
-      min-width: 160px;
       top: 100%;
       left: 0;
+      min-width: 200px;
       z-index: 1;
     }
     .dropdown-content a {
       display: block;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      white-space: nowrap;
       color: white;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .dropdown:hover .dropdown-content {
       display: block;
+    }
+    .hero {
+      background-image: url('https://paroyalarch.org/wp-content/uploads/2023/05/grandchapter-1.5.jpg');
+      background-size: 120% auto;
+      background-position: center;
+      padding: 6rem 1rem;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      font-family: 'Libre Baskerville', serif;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .cta {
+      background-color: #800000;
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+    .cta h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .cta p {
+      max-width: 700px;
+      margin: 1rem auto;
+      font-size: 1.1rem;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: white;
+      color: #800000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
     }
     .section {
       max-width: 1100px;
@@ -137,13 +179,14 @@
     @media (max-width: 768px) {
       .nav-toggle {
         display: block;
+        top: 1rem;
       }
       .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #5c0000;
-        margin-top: 1rem;
+        margin-top: 3rem;
         gap: 1rem;
       }
       .nav-links.active {
@@ -164,21 +207,22 @@
   </header>
 
   <nav>
-  <div class="nav-links" id="navLinks">
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-    <a href="#" onclick="return false;">About Us ▾</a>
-    <div class="dropdown-content">
-      <a href="meeting-info.html">Meeting Info</a>
-      <a href="officers.html">Officers</a>
-      <a href="past-high-priests.html">Past High Priests</a>
-      <a href="history.html">Our History</a>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" onclick="return false;">About Us ▾</a>
+        <div class="dropdown-content">
+          <a href="meeting-info.html">Meeting Info</a>
+          <a href="officers.html">Officers</a>
+          <a href="past-high-priests.html">Past High Priests</a>
+          <a href="history.html">Our History</a>
+        </div>
+      </div>
+      <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </div>
-  <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
-  <a href="join.html">Join Us</a>
-  <a href="contact.html">Contact</a>
-</div>
   </nav>
 
   <div class="hero">
@@ -189,7 +233,7 @@
     <h2>Discover the Depths of the Craft</h2>
     <p>As a Master Mason, you've begun a profound journey. Royal Arch Masonry reveals deeper truths, preserved through generations. It is the capstone of Ancient Craft Masonry, the missing word, the fuller story of who we are and why it matters.</p>
     <p>Royal Arch is not only history, it is insight, growth, and transformation.</p>
-    <a href="#">Begin the Journey</a>
+    <a href="join.html">Begin the Journey</a>
   </div>
 
   <div class="section">
@@ -213,5 +257,12 @@
   <footer>
     &copy; 2025 Bushy Run Chapter No. 192, Royal Arch Masons of Pennsylvania | Website inspired by paroyalarch.org
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
