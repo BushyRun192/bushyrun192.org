@@ -170,25 +170,17 @@
       background-color: #f8f8f8;
     }
     .pillars-header {
-      text-align: center;
-      margin-bottom: 2rem;
+      text-align: left;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+      border-bottom: 2px solid #800000;
     }
     .pillars-header h2 {
       font-size: 2.5rem;
       color: #800000;
       font-family: 'Libre Baskerville', serif;
+      margin: 0;
       padding-bottom: 0.5rem;
-      position: relative;
-      display: inline-block;
-    }
-    .pillars-header h2::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-      bottom: 0;
-      height: 2px;
-      background-color: #800000;
     }
     .card-grid {
       display: flex;
@@ -197,7 +189,6 @@
       gap: 2rem;
       max-width: 1000px;
       margin: 0 auto;
-      position: relative;
     }
     .card {
       background-color: white;
