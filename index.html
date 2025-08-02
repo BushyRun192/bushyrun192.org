@@ -93,41 +93,65 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 250px;
-        flex-direction: column;
-        background-color: white;
-        padding-top: 3rem;
-        z-index: 9999;
-        box-shadow: 2px 0 5px rgba(0,0,0,0.3);
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-links a {
-        color: #5c0000;
-        font-size: 1.2rem;
-        padding: 1rem;
-        border-bottom: 1px solid #ddd;
-      }
-      .dropdown-content {
-        position: static;
-        background-color: white;
-      }
-      .dropdown-content a {
-        color: #5c0000;
-        padding-left: 2rem;
-      }
-    }
+    /* === BEGIN: Mobile Nav Menu CSS Replacement === */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+  .nav-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    transition: left 0.3s ease;
+    z-index: 9999;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .nav-links a {
+    color: #800000;
+    font-size: 1.2rem;
+  }
+  .nav-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #800000;
+  }
+  .dropdown-content {
+    position: static;
+    background-color: white;
+  }
+  .dropdown-content a {
+    color: #800000;
+  }
+}
+@media (min-width: 769px) {
+  .nav-close {
+    display: none;
+  }
+}
+/* === END: Mobile Nav Menu CSS Replacement === */
+
     .hero {
       text-align: center;
       padding: 4rem 1rem;
@@ -218,24 +242,26 @@
     <p>Royal Arch Masons of Pennsylvania, Irwin, PA</p>
   </header>
 
-  <nav>
-    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <div class="dropdown">
-        <a href="#" onclick="return false;">About Us ▾</a>
-        <div class="dropdown-content">
-          <a href="meeting-info.html">Meeting Info</a>
-          <a href="officers.html">Officers</a>
-          <a href="past-high-priests.html">Past High Priests</a>
-          <a href="history.html">Our History</a>
-        </div>
+ <nav>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+  <div class="nav-links" id="navLinks">
+    <button class="nav-close" onclick="toggleMenu()">&times;</button>
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="#" onclick="return false;">About Us ▾</a>
+      <div class="dropdown-content">
+        <a href="meeting-info.html">Meeting Info</a>
+        <a href="officers.html">Officers</a>
+        <a href="past-high-priests.html">Past High Priests</a>
+        <a href="history.html">Our History</a>
       </div>
-      <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
-      <a href="join.html">Join Us</a>
-      <a href="contact.html">Contact</a>
     </div>
-  </nav>
+    <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
+    <a href="join.html">Join Us</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
 
   <div class="hero">
     <h2>What if there's more Light still ahead?</h2>
