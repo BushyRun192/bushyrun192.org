@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our History | Bushy Run Chapter No. 192</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f8f8;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background-color: #5c0000;
+      padding: 0.75rem 1rem;
+      position: relative;
+    }
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #5c0000;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: white;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .section h2 {
+      color: #800000;
+      font-size: 2.25rem;
+      border-bottom: 2px solid #800000;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-family: 'Libre Baskerville', serif;
+      text-align: left;
+    }
+    .coming-soon {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 250px;
+        background-color: white;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1rem;
+        transition: left 0.3s ease;
+        z-index: 9999;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+      }
+      .nav-links.active {
+        left: 0;
+      }
+      .nav-links a {
+        color: #800000;
+        font-size: 1.2rem;
+      }
+      .nav-close {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.8rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #800000;
+      }
+    }
+    @media (min-width: 769px) {
+      .nav-close {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://paroyalarch.org/wp-content/uploads/2023/05/cropped-Grand-Holy-Royal-Arch2.png" alt="Royal Arch Emblem">
+    <h1>Bushy Run Chapter No. 192</h1>
+    <p>Royal Arch Masons of Pennsylvania, Irwin, PA</p>
+  </header>
+
+  <nav>
+    <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <button class="nav-close" onclick="toggleMenu()">&times;</button>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" onclick="return false;">About Us ▾</a>
+        <div class="dropdown-content">
+          <a href="meeting-info.html">Meeting Info</a>
+          <a href="officers.html">Officers</a>
+          <a href="past-high-priests.html">Past High Priests</a>
+          <a href="history.html">Our History</a>
+        </div>
+      </div>
+      <a href="https://rapa.groupable.app/connect/connect_groups/63eeef1ec216fa97142d1f8ec15fa35c" target="_blank">Groupable</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h2>Our History</h2>
+    <p class="coming-soon">This page is coming soon. Please check back later for the history of Bushy Run Chapter No. 192.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Bushy Run Chapter No. 192. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
 
